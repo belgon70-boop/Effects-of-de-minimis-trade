@@ -206,7 +206,7 @@ Comparative Executive Summary
 -  Focused Data Targets: It allows us to focus our empirical research on specific locations—the five USPS International Service Centers (ISCs) (JFK, O'Hare, LAX, Miami, San Francisco)—making our scope manageable and targeted.
 
 -  Natural Policy Comparison: The STOP Act created a clear contrast between private carriers (like FedEx/UPS, which already used electronic tracking) and global postal services (USPS), giving us a well-defined comparison model for our project.
-> # Primary access points for AED & package data
+# Primary access points for AED & package data
 - Public Federal Portals & Data Catalogs
 CBP Data Portal (cbp.gov/newsroom/stats): Provides monthly and annual Section 321 entry stats, Type 86 clearance volumes, and enforcement seizure metrics.
 USPS Annual Reports & Financial Filings (about.usps.com): Tracks overall international inbound parcel volumes and country-level exchange metrics.
@@ -215,3 +215,21 @@ DHS Data Services (data.gov): Hosts aggregated trade datasets for cross-border p
 If we need structured data on AED compliance percentages, foreign post transmission rates, or postal facility inspection rates, these agency reports include detailed tables and charts:
 USPS Office of Inspector General (USPS OIG): Search white papers and audit reports on Advance Electronic Data Implementation (e.g., Report No. 20-221-R21). They publish tables detailing AED transmission rates by origin country.
 U.S. Government Accountability Office (GAO): Reports like GAO-23-105 (International Mail Security) contain aggregated data on AED risk-targeting scores, inspection rates, and enforcement bottlenecks at International Service Centers (ISCs).
+
+# Building data sets
+- Collecting Section 321/ Type 86 De Minimis Statistics from annual CBP Trade and Travel Operations Report
+  
+ > Important to note data will start from 2021, as it was enacted in January therefore data from 2020 - 2021 can be comparable to the effects of STOP act in following years
+
+<img width="1512" height="942" alt="Captura de pantalla 2026-10-15 a la(s) 2 44 52 a m" src="https://github.com/user-attachments/assets/6beb5b19-02e9-4ad5-9cab-5ed6db6b3cfa" />
+
+- Searched through the U.S. Postal Service Office of Inspector General for STOP Act compliance and mail inspection
+
+> All data sets have information blacked out, so an excel can not be built based off this information
+
+- > Will look at Postal Regulatory Commission: Annual Compliance Determination
+  > > The PRC is the official regulatory regulator of USPS. Every year, USPS must legally submit its performance data to the PRC, and the PRC publishes an unredacted audit called the Annual Compliance Determination (ACD).
+  > >
+  > > While the USPS Inspector General (OIG) redacts law-enforcement sensitive details, the PRC publishes the official statutory compliance percentages required under the STOP Act (Section 8001 of Public Law 115-271).
+
+  
