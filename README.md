@@ -185,7 +185,7 @@ Comparative Executive Summary
 > > Annual Volume Impact: Closed anonymity gap for ~400M annual postal packages; established digital screening trace.
  
 - Executive Order 14295:
--
+
 > > Issued: April 2025 & Fully Enforced: August 2025
 > >
 > > Primary Implementing Agencies: Department of Homeland Security (DHS), CBP, Dept. of Commerce
@@ -217,19 +217,73 @@ USPS Office of Inspector General (USPS OIG): Search white papers and audit repor
 U.S. Government Accountability Office (GAO): Reports like GAO-23-105 (International Mail Security) contain aggregated data on AED risk-targeting scores, inspection rates, and enforcement bottlenecks at International Service Centers (ISCs).
 
 # Building data sets
-- Collecting Section 321/ Type 86 De Minimis Statistics from annual CBP Trade and Travel Operations Report
+ Collecting Section 321/ Type 86 De Minimis Statistics from annual CBP Trade and Travel Operations Report
   
  > Important to note data will start from 2021, as it was enacted in January therefore data from 2020 - 2021 can be comparable to the effects of STOP act in following years
 
 <img width="1512" height="942" alt="Captura de pantalla 2026-10-15 a la(s) 2 44 52 a m" src="https://github.com/user-attachments/assets/6beb5b19-02e9-4ad5-9cab-5ed6db6b3cfa" />
 
-- Searched through the U.S. Postal Service Office of Inspector General for STOP Act compliance and mail inspection
+ Searched through the U.S. Postal Service Office of Inspector General for STOP Act compliance and mail inspection
 
-> All data sets have information blacked out, so an excel can not be built based off this information
-
-- > Will look at Postal Regulatory Commission: Annual Compliance Determination
+ > All data sets have information blacked out, so an excel can not be built based off this information
+  > > Will look at Postal Regulatory Commission: Annual Compliance Determination
   > > The PRC is the official regulatory regulator of USPS. Every year, USPS must legally submit its performance data to the PRC, and the PRC publishes an unredacted audit called the Annual Compliance Determination (ACD).
   > >
   > > While the USPS Inspector General (OIG) redacts law-enforcement sensitive details, the PRC publishes the official statutory compliance percentages required under the STOP Act (Section 8001 of Public Law 115-271).
 
+# What exactly was categorized under Type 86?
+Entry Type 86 is an automated electronic entry created by CBP in 2019 under Section 321.
+
+> Individual direct-to-consumer e-commerce packages valued at ≤$800 arriving on commercial carriers (e.g., cargo flights, express carriers like FedEx/DHL/UPS, or cross-border logistics brokers handling Shein and Temu orders). It also covers packages that require Partner Government Agency (PGA) clearance (such as FDA-regulated cosmetics or low-value devices).
+
+### Comparison: Entry Type 86 vs. International Postal Mail
+
+| Dimension | Entry Type 86 (Commercial Cargo) | International Postal Mail (Traditional Route) |
+| :--- | :--- | :--- |
+| **Carriers & Logistics** | Private Express & Commercial Air (FedEx, UPS, DHL, or chartered air cargo carrying Shein/Temu orders). | Foreign Post Offices (e.g., China Post, Royal Mail) handed over to the **U.S. Postal Service (USPS)**. |
+| **Who Files Customs Data?** | A licensed **U.S. Customs Broker** or logistics carrier using CBP’s Automated Commercial Environment (ACE). | The **Foreign Postal Operator** sending Advance Electronic Data (AED) through international postal networks (UPU). |
+| **Partner Government Agencies (PGAs)** | **Allowed.** Clears FDA-regulated goods (e.g., skincare, low-value devices), CPSC, or EPA items electronically. | **Not Allowed / Very Limited.** Complex agency-regulated goods cannot clear under informal postal processes. |
+| **Data Requirements** | Specific 10-digit Harmonized Tariff Schedule (HTS) codes, seller/buyer details, and itemized manifests. | Standard mail manifests (sender, recipient, weight, declared value, generic item description). |
+| **Transmission Timing & Speed** | Transmitted electronically **before flight arrival**, enabling automated pre-clearance and release. | Arrives via postal IT messaging systems (UPU), often processed upon arrival at USPS ISCs. |
+| **Legal Liability** | The licensed U.S. Customs Broker assumes legal liability for accurate electronic data submissions. | Foreign postal posts handle manifest creation without individual U.S. broker liability attached. |
+
+# Diving deeper into the graphs 
+Why is the pattern different between international postal and Type 86?
+- International Postal (Decreased -74%)
+  > Before 2018, foreign postal services shipped packages using paper labels without digital data. When the STOP Act enforced mandatory 100% Advance Electronic Data (AED) by January 2021, foreign post offices that could not comply were barred from shipping. As a result, shippers abandoned postal networks.
+
+- Entry Type 86 (Surged +676%)
+  > E-commerce sellers shifted their supply chains away from postal mail into commercial express air freight. Customs brokers use Entry Type 86 to electronically file thousands of individual $800 packages at once directly into CBP's ACE software before the flight even lands.
   
+# Collecting data at the port level 
+Which ports to focus on and why?
+
+### Key Port Comparison Matrix
+
+| Dimension | Port of JFK (NY) | Port of Memphis (TN) | Port of Laredo (TX) |
+| :--- | :--- | :--- | :--- |
+| **Primary Mode** | Air Postal Mail | Express Air Cargo | Commercial Trucking |
+| **Clearance Mechanism** | USPS Postal Clearances | Entry Type 86 (Commercial ACE) | Section 321 Truck Manifests |
+| **Key Policy Tested** | **STOP Act (2018)**<br>*(AED Enforcement)* | **TFTEA (2016)**<br>*( $800 Threshold Surge)* | **EO 14295**<br>*(Transshipment Monitoring)* |
+| **Data Pattern Highlighted** | Collapse of postal volumes (-74%) | Explosive surge in Type 86 (+676%) | Steady growth in cross-border truck BOLs |
+
+---
+
+### Primary Data Sources
+
+* **Port of JFK (Air Postal):** Postal Regulatory Commission (PRC) ACD Reports & USPS OIG Audits (`prc.gov`).
+* **Port of Memphis (Express Cargo / Type 86):** CBP ACE Data Portal & Trade and Travel Operations Reports (`cbp.gov`).
+* **Port of Laredo (Land Trucking):** Bureau of Transportation Statistics (BTS) TransBorder Freight Database (`bts.gov/transborder`).
+
+> # Where to collect this data:
+> #### Port of JFK (NY) — Air Postal Data & STOP Act Metrics
+> * **Source:** [Postal Regulatory Commission (PRC) Annual Compliance Determination (ACD) Reports](https://www.prc.gov/reports/acd) and [USPS Office of Inspector General (OIG) Audit Reports](https://www.uspsoig.gov).
+> * * **What it tracks:** International Mail Facility (IMF) inbound package volumes, Advance Electronic Data (AED) transmission rates, and postal seizure logs.
+
+> #### Port of Memphis (TN) — Express Cargo & Entry Type 86 Data
+> * **Source:** [U.S. Customs and Border Protection (CBP) Trade and Travel Operations Reports](https://www.cbp.gov/newsroom/stats/trade) and CBP Automated Commercial Environment (ACE) Entry Statistics.
+> * * **What it tracks:** Section 321 Entry Type 86 volume clearances, air express bills of lading (BOLs), and air cargo hub metrics.
+
+> #### Port of Laredo (TX) — Cross-Border Land Trucking Data
+> * **Source:** [Bureau of Transportation Statistics (BTS) TransBorder Freight Data](https://www.bts.gov/transborder) and [U.S. Census Bureau USA Trade Online](https://usatrade.census.gov).
+> * * **What it tracks:** Monthly truck and rail cross-border bill of lading counts, Port of Laredo entry values, and Southwest land border Section 321 cargo manifests.
