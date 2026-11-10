@@ -6,11 +6,13 @@ Contributors:
 # Executive summary
 This project evaluates the relationship between low-value, duty-free trade (de minimis under 19 U.S.C. § 1321) and the supply of illicit synthetic opioids (fentanyl, analogues, and precursor chemicals) across U.S. jurisdictions.
 
+
+# Data collection & FOIA request timeline 
+
 While mortality and public health data are available at the state level via the CDC, official administrative data for de minimis shipments cannot be disaggregated by destination state or port of entry via standard FOIA channels. Customs and Border Protection (CBP) has formally confirmed that raw package data is technically unextractable and that port-level data is exempted from public release.
 
 This is the information that was provided as substitution: https://www.cbp.gov/newsroom/stats/drug-seizure-statistics https://www.cbp.gov/document/foia-record/cbp-office-field-operations-statistics  https://www.cbp.gov/document/foia-record/cbp-border-patrol-statistics 
 
-# Data collection & FOIA request timeline 
 Initial Objective was a balanced state-level panel dataset (2018–2025) combining:
 State-level and Port-of-Entry de minimis package counts, Entry Type 86 filings, and International Mail Facility (IMF) drug seizures. This would be obtained through an FOIA request. 
 
@@ -234,7 +236,7 @@ U.S. Government Accountability Office (GAO): Reports like GAO-23-105 (Internatio
 # What exactly was categorized under Type 86?
 Entry Type 86 is an automated electronic entry created by CBP in 2019 under Section 321.
 
-> Individual direct-to-consumer e-commerce packages valued at ≤$800 arriving on commercial carriers (e.g., cargo flights, express carriers like FedEx/DHL/UPS, or cross-border logistics brokers handling Shein and Temu orders). It also covers packages that require Partner Government Agency (PGA) clearance (such as FDA-regulated cosmetics or low-value devices).
+> Individual direct-to-consumer e-commerce packages valued at ≤$800 arriving on commercial carriers (e.g., cargo flights, express carriers like FedEx/DHL/UPS, or cross-border logistics brokers handling Shein and Temu orders). It also covers packages that require Partner Government Agency clearance such as FDA-regulated cosmetics or low-value devices.
 
 ### Comparison: Entry Type 86 vs. International Postal Mail
 
@@ -258,14 +260,15 @@ Why is the pattern different between international postal and Type 86?
 # Collecting data at the port level 
 Which ports to focus on and why?
 
-### Key Port Comparison Matrix
+### Key Port Comparison Matrix (STOP Act Focus)
 
 | Dimension | Port of JFK (NY) | Port of Memphis (TN) | Port of Laredo (TX) |
 | :--- | :--- | :--- | :--- |
-| **Primary Mode** | Air Postal Mail | Express Air Cargo | Commercial Trucking |
-| **Clearance Mechanism** | USPS Postal Clearances | Entry Type 86 (Commercial ACE) | Section 321 Truck Manifests |
-| **Key Policy Tested** | **STOP Act (2018)**<br>*(AED Enforcement)* | **TFTEA (2016)**<br>*( $800 Threshold Surge)* | **EO 14295**<br>*(Transshipment Monitoring)* |
-| **Data Pattern Highlighted** | Collapse of postal volumes (-74%) | Explosive surge in Type 86 (+676%) | Steady growth in cross-border truck BOLs |
+| **Primary Transport Mode** | Air Postal Mail (USPS) | Express Air Cargo | Commercial Land Trucking |
+| **Clearance Mechanism** | International Postal Clearance | Entry Type 86 (ACE Brokers) | Section 321 Land Manifests |
+| **Pre-STOP Act Baseline (Pre-2018)** | High-volume paper mail gateway; processed unmanifested foreign parcels without pre-arrival digital tracking. | Private express cargo clearing with carrier-provided electronic manifests. | Standard cross-border truck deconsolidation hub under informal manifest rules. |
+| **Post-STOP Act Enforcement (2021–Present)** | **Severe volume collapse (-74%)** as foreign postal operators lacking Advance Electronic Data (AED) were turned back. | **Massive volume surge (+676% Type 86)** as e-commerce migrated out of postal mail into commercial air cargo. | **Shift to commercial land freight** to bypass international postal data bottlenecks. |
+| **Core Empirical Metric Analyzed** | **Postal AED Compliance & Seizure Logs** | **Entry Type 86 Migration Volume** | **Cross-Border Land Mode Diversion** |
 
 ---
 
